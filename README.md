@@ -1,66 +1,51 @@
-# Techvibe
-# Medical Document Intelligence & Patient Timeline
+# Medical Document Intelligence & Patient Timeline — Review 3
 
-## Hackathon Review 3
+A browser-based hackathon prototype built with HTML, CSS and JavaScript.
 
-### About the Project
+## Run in VS Code
 
-Medical Document Intelligence & Patient Timeline is a web-based application that helps organize medical documents and patient medical information in one place.
+1. Open this folder in VS Code.
+2. Install/use **Live Server** (recommended).
+3. Right-click `index.html` → **Open with Live Server**.
+4. Sign in with one of the demo accounts.
 
-The system provides a structured view of medical information and presents important events through a patient timeline.
+No Node.js or backend is required.
 
-### Key Features
+### Demo accounts
 
-* Patient dashboard
-* Medical document management
-* Patient timeline
-* Medical information organization
-* Document categorization
-* Easy-to-use interface
-* Sample/demo patient data
+- Admin — admin@demo.com / Admin@123
+- Doctor — doctor@demo.com / Doctor@123
+- Viewer — viewer@demo.com / Viewer@123
 
-### Technologies Used
+## Working features
 
-* HTML
-* CSS
-* JavaScript
-* Visual Studio Code
-* Live Server
+- Session-based login using `sessionStorage`
+- Admin / Doctor / Viewer frontend role controls
+- Multiple patients keyed by Patient ID
+- Patient name / ID search
+- Create and delete patients
+- Multiple document upload per patient
+- Patient-isolated document storage in `localStorage`
+- PDF text extraction through PDF.js CDN
+- Text/CSV extraction using browser APIs
+- Rule-based extraction of dates, doctors, conditions, medicines and common lab mentions
+- Disease/condition history
+- Recent illness
+- Doctor history
+- Prescription history
+- Prescription comparison
+- Lab history
+- Complete chronological timeline
+- Demo data reset
 
-### How to Run
+## Important prototype note
 
-1. Download or clone the repository.
-2. Open the project folder in Visual Studio Code.
-3. Install the Live Server extension.
-4. Right-click `index.html`.
-5. Select **Open with Live Server**.
-6. The application will open in the browser.
+This is a hackathon prototype, not a clinical decision-support or diagnostic system. The NLP is intentionally rule-based and should not be treated as medically authoritative.
 
-### Project Structure
+## Storage
 
-```text
-Medical-Document-Intelligence/
-├── index.html
-├── app.js
-├── style.css
-├── run.bat
-├── data/
-├── documents/
-├── js/
-└── README.md
-```
+Data is stored locally in the browser. Clearing site data or using the Admin reset removes locally stored records.
 
-### Purpose
+## Suggested demo flow
 
-The project aims to make medical information easier to organize and view by bringing information from different medical documents into a structured patient timeline.
-
-### Future Enhancements
-
-* AI-based medical information extraction
-* Automatic document summarization
-* OCR for scanned documents
-* Advanced patient timeline generation
-* Secure cloud storage
-* Healthcare system integration
-
-
+Login as Admin → search Ananya → open patient → Documents → upload 2–3 text/PDF records → view Analysis → Prescriptions → Rx Comparison → Lab History → Timeline → switch to Rahul to demonstrate patient isolation → login as Viewer to demonstrate read-only access.
